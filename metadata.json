@@ -1,0 +1,8 @@
+{
+  "name": "Remix Napkin - Hand-Drawn Brainstorming Studio - usable",
+  "description": "An authentically imperfect brainstorming and sketchpad studio with hand-drawn napkin diagrams, organic sticky notes, and paper textures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

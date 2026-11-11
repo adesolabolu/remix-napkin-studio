@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-paper: #fdfbf7;
+    --color-pencil: #2d2d2d;
+    --color-erased: #e5e0d8;
+    --color-marker: #ff4d4d;
+    --color-pen: #2d5da1;
+    --color-postit: #fff9c4;
+    --font-heading: 'Kalam', cursive, sans-serif;
+    --font-body: 'Patrick Hand', cursive, sans-serif;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-pencil);
+    font-family: var(--font-body);
+    background-image: radial-gradient(#e5e0d8 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    background-repeat: repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Wobbly border utility classes */
+.border-wobbly {
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+.border-wobbly-md {
+  border-radius: 15px 225px 15px 255px / 255px 15px 225px 15px;
+}
+
+.border-wobbly-lg {
+  border-radius: 255px 25px 225px 25px / 25px 225px 25px 255px;
+}
+
+.border-wobbly-round {
+  border-radius: 58% 42% 63% 37% / 41% 59% 41% 59%;
+}
+
+.border-wobbly-bubble {
+  border-radius: 255px 18px 225px 15px / 18px 225px 18px 255px;
+}
+
+/* Hard offset shadows */
+.shadow-hard {
+  box-shadow: 4px 4px 0px 0px #2d2d2d;
+}
+
+.shadow-hard-lg {
+  box-shadow: 8px 8px 0px 0px #2d2d2d;
+}
+
+.shadow-hard-sm {
+  box-shadow: 2px 2px 0px 0px #2d2d2d;
+}
+
+.shadow-hard-hover:hover {
+  box-shadow: 2px 2px 0px 0px #2d2d2d;
+  transform: translate(2px, 2px);
+}
+
+.shadow-hard-lift:hover {
+  box-shadow: 8px 8px 0px 0px #2d2d2d;
+  transform: translate(-2px, -2px);
+}
+
+/* Authentic Paper & Tape styles */
+.masking-tape {
+  background-color: rgba(229, 224, 216, 0.85);
+  box-shadow: 0 1px 3px rgba(45, 45, 45, 0.12);
+  border-left: 2px dashed rgba(45, 45, 45, 0.2);
+  border-right: 2px dashed rgba(45, 45, 45, 0.2);
+}
+
+.pushpin-red {
+  background: radial-gradient(circle at 35% 35%, #ff8080, #ff4d4d 60%, #b31e1e);
+  box-shadow: 2px 2px 0px #2d2d2d;
+}
+
+.pushpin-blue {
+  background: radial-gradient(circle at 35% 35%, #6ea4f7, #2d5da1 60%, #163666);
+  box-shadow: 2px 2px 0px #2d2d2d;
+}
+
+/* Hand-drawn squiggly and wavy underline */
+.wavy-underline {
+  text-decoration: underline wavy #ff4d4d 2px;
+  text-underline-offset: 6px;
+}
+
+.wavy-underline-blue {
+  text-decoration: underline wavy #2d5da1 2px;
+  text-underline-offset: 6px;
+}
+
+/* Animations */
+@keyframes doodleBounce {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-doodle-bounce {
+  animation: doodleBounce 3.2s ease-in-out infinite;
+}
+
+@keyframes slowSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slowSpin 24s linear infinite;
+}
+
+/* Selection */
+::selection {
+  background: #fff9c4;
+  color: #2d2d2d;
+}
